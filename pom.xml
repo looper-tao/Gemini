@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>gemini-center-service</module>
+        <module>gemini-center-lib</module>
     </modules>
 
     <parent>
