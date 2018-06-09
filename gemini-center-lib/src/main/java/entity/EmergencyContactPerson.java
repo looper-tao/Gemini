@@ -8,10 +8,10 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "g_bank_card")
+@Table(name = "g_emergency_contact_person")
 @Getter
 @Setter
-public class BankCard implements Serializable{
+public class EmergencyContactPerson implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -22,17 +22,15 @@ public class BankCard implements Serializable{
     @ManyToOne
     private UserInfo userInfo;
 
-    @Column(name = "card_number",nullable = false,length = 64)
-    private String cardNumber;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "deposit_bank",nullable = false,length = 128)
-    private String depositBank;
+    @Column(name = "relationship",nullable = false)
+    private String relationship;
 
-    @Column(name = "mobile",nullable = false,length = 64)
+    @Column(name = "mobile",nullable = false)
     private String mobile;
 
     @Column(name = "create_at")
     private Date createAt;
-
-
 }
